@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Turnos YA | Sistema de reservas online para negocios</title>
+  <meta name="description" content="Sistema de turnos online simple y rápido para barberías, estética y profesionales. Gestioná reservas, horarios y clientes desde un solo lugar.">
+  <meta name="keywords" content="turnos online, sistema de reservas, agenda digital, software para barberías, sistema de turnos estética, reservas online Argentina, calendario de turnos">
+  <meta name="author" content="Turnos YA">
+  <meta name="robots" content="index, follow">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  </head>
+
+<body>
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Turnos YA | Sistema de reservas online</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="layout">
+
+
+  <aside class="sidebar">
+    <h2 class="logo">Turnos<span> YA</span></h2>
+
+    <nav class="menu">
+      <p>📅 Calendario</p>
+      <p>👥 Profesionales</p>
+      <p>💼 Servicios</p>
+      <p>⚙️ Configuración</p>
+    </nav>
+  </aside>
+
+  <main class="main">
+
+  
+    <div class="topbar">
+      <h1>Reservas</h1>
+
+      <button id="btnNuevoTurno" class="btn">
+        Agendá un turno
+      </button>
+    </div>
+
+
+    <div class="grid">
+
+
+      <section class="calendario">
+
+        <div class="cal-header">
+          <button id="prevMes">◀</button>
+          <span id="mesTexto"></span>
+          <button id="nextMes">▶</button>
+        </div>
+
+        <div class="dias-semana">
+          <span>Lun</span><span>Mar</span><span>Mié</span>
+          <span>Jue</span><span>Vie</span><span>Sáb</span><span>Dom</span>
+        </div>
+
+        <div id="calDias"></div>
+
+      </section>
+
+ 
+      <section class="agenda">
+
+        <h2 id="tituloDia">🗓️ Agenda del día</h2>
+
+        <div id="agenda"></div>
+
+      </section>
+
+    </div>
+
+  </main>
+
+</div>
+
+
+<div id="modal" class="modal hidden">
+
+  <form id="formTurno" class="form">
+
+    <h2 id="tituloModal"></h2>
+
+    <label>Cliente</label>
+    <input id="nombre" type="text" placeholder="Nombre del cliente">
+
+    <label>Profesional</label>
+    <select id="profesional" required>
+      <option value="" disabled selected>Seleccionar profesional</option>
+      <option value="Juan">Juan</option>
+      <option value="Ana">Ana</option>
+      <option value="Mica">Mica</option>
+      <option value="Lucia">Lucia</option>
+    </select>
+
+    <label>Servicio</label>
+    <select id="servicio" required>
+      <option value="" disabled selected>Seleccionar servicio</option>
+    </select>
+
+    <label>Horario</label>
+    <div id="horarios" class="horarios-grid"></div>
+
+    <div class="actions">
+      <button type="button" id="cerrarModal">Cancelar</button>
+      <button type="submit">📱 Reservar ahora</button>
+    </div>
+
+  </form>
+
+</div>
+
+<script src="js/script.js" defer></script>
+
+</body>
+</html>
